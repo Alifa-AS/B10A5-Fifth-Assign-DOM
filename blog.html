@@ -12,13 +12,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body class="lexend-font"></body>
     <header class="container mx-auto sticky top-0 bg-slate-50 bg-opacity-30 backdrop-blur-md">
         <!-- navbar start --> 
         <nav class="flex justify-between items-center bg-[#F9F7F3] px-10 py-5">
             <div>
-                <button class="btn text-black font-bold  bg-lime-400 rounded-lg hover:bg-lime-200">Blog</button>
+                <button class="btn text-black font-bold bg-lime-400 rounded-lg hover:bg-lime-200 px-8">HOME</button>
             </div>
             <div class="flex items-center gap-3 hover:text-lime-400 font-bold text-lg">
                 <img class="border-2 border-dashed" src="./assets/logo.png" alt="">
@@ -30,44 +32,42 @@
             </div>
         </nav>
         <!-- navbar end -->
-
-        <!-- banner start -->
-         <div class="text-center py-10 space-x-10">
-            <button class="btn">Donation </button>
-            <button class="btn">History</button>
-         </div>  
-         <!-- banner end -->
     </header>
     <!-- main start -->
      <main>
         <section class="w-3/4 mx-auto py-16 px-20">
+          <div class="text-2xl py-10 flex gap-3">
+            <h1 class="font-bold">Important FAQ</h1>
+            <img class="w-7 h-7" src="./assets/ask.png" alt="">
+          </div>
             <div class="join join-vertical w-full">
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" checked="checked" />
                   <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
                   <div class="collapse-content">
-                    <p>hello</p>
+                    <p class="text-sm">Document Object Model DOM is stands for Programming interface of web document.
+                      It is a document model which coverts HTML like object model.</p>
                   </div>
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" />
                   <div class="collapse-title text-xl font-medium">How you Select an element from the DOM?</div>
                   <div class="collapse-content">
-                    <p>hello</p>
+                    <p class="text-sm">There are Several way for select elements from DOM  by including className,ID,tagName, querySelector & QuerySelectorALL </p>
                   </div>
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" />
                   <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
                   <div class="collapse-content">
-                    <p>hello</p>
+                    <p class="text-sm">Event Delegation is basically a pattern of handle events efficiently.Instead of adding event listener type element. </p>
                   </div>
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                     <input type="radio" name="my-accordion-4" />
                     <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
                     <div class="collapse-content">
-                      <p>hello</p>
+                      <p class="text-sm">JS can easily manipulate html elements by DOM. It can change web element, add, create and also remove elements and attributes.</p>
                     </div>
                   </div>
               </div>
