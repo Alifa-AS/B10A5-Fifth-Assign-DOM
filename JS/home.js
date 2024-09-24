@@ -11,3 +11,7 @@ function getMoneyValueById(id){
     const moneyNumber = parseFloat(moneyValue);
     return moneyNumber;
 }
+
+function showHistoryById(id){
+    co
+}

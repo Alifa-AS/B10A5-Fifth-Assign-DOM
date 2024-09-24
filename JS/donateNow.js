@@ -1,4 +1,3 @@
-console.log('connect done')
 document.getElementById('btn-donate-now').addEventListener('click', function(event){
     event.preventDefault();
 
@@ -6,16 +5,12 @@ document.getElementById('btn-donate-now').addEventListener('click', function(eve
     const accountBalance = getMoneyValueById('account-balance')
     console.log('add money donate',donateBalance, accountBalance)
 
-    // if(donateBalance > mainBalance){
-    //     alert('You Do not have sufficient Balance')
-    //     return;
-    //}
 
     if(isNaN(donateBalance) || donateBalance < 0){
         alert('Please Enter Valid Amount')
     }
     else if(accountBalance === 0){
-        console.log('Donation is not added')
+        console.log('You Do not have sufficient Balance!')
     }
     else{
         // myModal.style.display = 'block';
