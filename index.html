@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,9 @@
         <!-- navbar start --> 
         <nav class="flex justify-between items-center bg-[#F9F7F3] px-10 py-5">
             <div>
-                <button class="btn text-black font-bold px-8 bg-lime-400 rounded-lg hover:bg-lime-200">Blog</button>
+                <button class="btn text-black font-bold px-8 bg-lime-400 rounded-lg hover:bg-lime-200">
+                    <a href="blog.html">Blog</a>
+                </button>
             </div>
             <div class="flex items-center gap-3 hover:text-lime-400 font-bold text-lg">
                 <img class="border-2 border-dashed" src="./assets/logo.png" alt="">
@@ -26,7 +28,7 @@
             </div>
             <div class="flex">
                 <img src="./assets/coin.png" alt="">
-                <h1>5500 BDT</h1>
+                <h1 id="account-balance">5500 BDT</h1>
             </div>
         </nav>
         <!-- navbar end -->
@@ -49,7 +51,7 @@
            <div class="flex-1 lg:px-10 ">
                 <div class="py-2"><button class="flex btn">
                     <img src="./assets/coin.png" alt="">
-                    <h2>0 BDT</h2>
+                    <h2 id="donate-received">4200 BDT</h2>
                 </button></div>
                 <div class="py-2">
                     <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
@@ -58,9 +60,9 @@
                 </div>
                 <div class="w-full">
                     <input type="text" class="border-2 w-full rounded-lg p-2"
-                        name="" id="" placeholder="Write Donation Amount"></div>
-                <div class="py-3">
-                    <button class="btn w-full bg-lime-400">Donate Now</button>
+                        name="" id="input-donate-Now" placeholder="Write Donation Amount"></div>
+                    <div class="py-3">
+                    <button id="btn-donate-now" class="btn w-full bg-lime-400">Donate Now</button>
                 </div>
            </div>
         </section>
@@ -72,7 +74,7 @@
             <div class="flex-1 lg:px-10 ">
                  <div class="py-2"><button class="flex btn">
                      <img src="./assets/coin.png" alt="">
-                     <h2>0 BDT</h2>
+                     <h2>8300 BDT</h2>
                  </button></div>
                 <div class="py-2">
                  <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
@@ -80,10 +82,10 @@
                     Please consider donating today to assist those in urgent need.</p>
                 </div>
                  <div class="w-full">
-                     <input type="text" class="border-2 w-full rounded-lg p-2"
-                         name="" id="" placeholder="Write Donation Amount"></div>
-                 <div class="py-3">
-                     <button class="btn w-full bg-lime-400">Donate Now</button>
+                    <input type="text" class="border-2 w-full rounded-lg p-2"
+                         name="" id="input-donate-Now" placeholder="Write Donation Amount"></div>
+                     <div class="py-3">
+                     <button id="btn-donate-now" class="btn w-full bg-lime-400">Donate Now</button>
                  </div>
             </div>
          </section>
@@ -95,7 +97,7 @@
             <div class="flex-1 lg:px-10 ">
                  <div class="py-2"><button class="flex btn">
                      <img src="./assets/coin.png" alt="">
-                     <h2>0 BDT</h2>
+                     <h2>8300 BDT</h2>
                  </button></div>
                 <div class="py-2">
                  <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
@@ -103,10 +105,10 @@
                     Please consider making a donation to support these brave individuals in their time of need.</p>
                 </div>
                  <div class="w-full">
-                     <input type="text" class="border-2 w-full rounded-lg p-2"
-                         name="" id="" placeholder="Write Donation Amount"></div>
+                    <input type="text" class="border-2 w-full rounded-lg p-2"
+                         name="" id="input-donate-Now" placeholder="Write Donation Amount"></div>
                  <div class="py-3">
-                     <button class="btn w-full bg-lime-400">Donate Now</button>
+                     <button id="btn-donate-now" class="btn w-full bg-lime-400">Donate Now</button>
                  </div>
             </div>
          </section>
@@ -116,6 +118,9 @@
     </footer>
 
     <!-- script link -->
+     <script src="./JS/home.js"></script>
+     <script src="./JS/donateNow.js"></script>
+     <script src="./JS/cashOut.js"></script>
      <script src=""></script>
 </body>
 </html>
