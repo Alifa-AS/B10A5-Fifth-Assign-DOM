@@ -35,8 +35,8 @@
 
         <!-- banner start -->
          <div class="text-center py-10 space-x-10">
-            <button id="input-btn-donate" class="btn bg-lime-400 hover:bg-lime-300">Donation </button>
-            <button id="input-btn-history" class="btn hover:bg-lime-300"> History
+            <button id="input-btn-donate" class="btn bg-lime-400">Donation </button>
+            <button id="input-btn-history" class="btn"> History
                 <!-- <a href="history.html">History</a> -->
             </button>
             <!-- <div id="input-btn-history"
@@ -59,7 +59,7 @@
     <div id="history-section" class="text-2xl text-center hidden">
         <h2>history</h2>
         <div id="history-container">
-
+         <div id="history-list" class="grid grid-cols-6"></div>
         </div>
     </div>
     <!-- main start -->
@@ -106,7 +106,7 @@
                     <input type="text" class="border-2 w-full rounded-lg p-2"
                          name="" id="input-donate-Now" placeholder="Write Donation Amount"></div>
                      <div class="py-3">
-                     <button id="btn-donate-now" class="btn w-full bg-lime-400">Donate Now</button>
+                     <button id="btn-donate-feni" class="btn w-full bg-lime-400">Donate Now</button>
                  </div>
             </div>
          </section>
@@ -129,34 +129,31 @@
                     <input type="text" class="border-2 w-full rounded-lg p-2"
                          name="" id="input-donate-Now" placeholder="Write Donation Amount"></div>
                  <div class="py-3">
-                     <button id="btn-donate-now" class="btn w-full bg-lime-400">Donate Now</button>
+                     <button id="btn-donate-quota" class="btn w-full bg-lime-400">Donate Now</button>
                  </div>
             </div>
          </section>
     </main>
 
-    <section>
-        <!-- The button to open modal -->
-        <!-- <label for="my_modal_6" class="btn">open modal</label> -->
-         <button id="open-myModal" class="btn">open!</button>
-        
-        <input type="checkbox" id="my_modal_6" class="modal-toggle" />
-        <div class="modal" role="dialog">
-        <div class="modal-box">
-            <h3 class="text-lg font-bold">Donate successfully add!</h3>
-            <p class="py-4" id="myModal-msg">Thanks for your contribution.</p>
-            <div class="modal-action">
-                <button id="close-myModal" class="btn">Close!</button>
-            <!-- <label for="my_modal_6" class="btn">Close!</label> -->
-            </div>
-        </div>
-        </div>
-    </section>
-    
+    <!-- <section>
+         The button to open modal 
+<label for="my_modal_6" class="btn">open modal</label>
+
+<input type="checkbox" id="my_modal_6" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">This modal works with a hidden checkbox!</p>
+    <div class="modal-action">
+      <label for="my_modal_6" class="btn">Close!</label>
+    </div>
+  </div>
+</div>
+    </section> -->
     <!-- footer start -->
     <footer class="container mx-auto bg-[#F9F7F3] py-10">
     </footer>
-     
+
     <!-- script link -->
      <script src="./JS/home.js"></script>
      <script src="./JS/donateNow.js"></script>

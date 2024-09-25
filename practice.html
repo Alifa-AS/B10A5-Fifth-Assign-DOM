@@ -1,0 +1,143 @@
+<main id="main-section" class="container mx-auto">
+    <!-- card-1 -->
+    <section class="w-3/4 mx-auto lg:flex lg:justify-between items-center flex-1 lg:border-2 lg:rounded-lg lg:p-5 my-5">
+        <div class="max-w-sm">
+            <img class="h-full" src="./assets/noakhali.png" alt="">
+        </div>
+        <div class="flex-1 lg:px-10 ">
+            <div class="py-2"><button class="flex btn">
+                <img src="./assets/coin.png" alt="">
+                <h2 id="donate-received">4200 BDT</h2>
+            </button></div>
+            <div class="py-2">
+                <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                <p class="py-2 text-sm text-gray-500">The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+            </div>
+            <div class="w-full">
+                <input type="number" class="border-2 w-full rounded-lg p-2" id="input-donate-now-noakhali" placeholder="Write Donation Amount">
+            </div>
+            <div class="py-3">
+                <button id="btn-donate-now-noakhali" class="btn w-full bg-lime-400">Donate Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- card-2 -->
+    <section class="w-3/4 mx-auto lg:flex lg:justify-between items-center flex-1 lg:border-2 lg:p-5 my-5">
+        <div class="max-w-sm">
+            <img class="h-full" src="./assets/feni.png" alt="">
+        </div>
+        <div class="flex-1 lg:px-10 ">
+            <div class="py-2"><button class="flex btn">
+                <img src="./assets/coin.png" alt="">
+                <h2>4200 BDT</h2>
+            </button></div>
+            <div class="py-2">
+                <h1 class="text-xl font-bold">Donate for Flood Relief in Feni, Bangladesh</h1>
+                <p class="py-2 text-sm text-gray-500">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+            </div>
+            <div class="w-full">
+                <input type="number" class="border-2 w-full rounded-lg p-2" id="input-donate-now-feni" placeholder="Write Donation Amount">
+            </div>
+            <div class="py-3">
+                <button id="btn-donate-now-feni" class="btn w-full bg-lime-400">Donate Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- card-3 -->
+    <section class="w-3/4 mx-auto lg:flex lg:justify-between items-center flex-1 lg:border-2 lg:p-5 my-5">
+        <div class="max-w-sm">
+            <img class="h-full" src="./assets/quota-protest.png" alt="">
+        </div>
+        <div class="flex-1 lg:px-10 ">
+            <div class="py-2"><button class="flex btn">
+                <img src="./assets/coin.png" alt="">
+                <h2>4200 BDT</h2>
+            </button></div>
+            <div class="py-2">
+                <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
+                <p class="py-2 text-sm text-gray-500">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+            </div>
+            <div class="w-full">
+                <input type="number" class="border-2 w-full rounded-lg p-2" id="input-donate-now-quota" placeholder="Write Donation Amount">
+            </div>
+            <div class="py-3">
+                <button id="btn-donate-now-quota" class="btn w-full bg-lime-400">Donate Now</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section>
+    <!-- Button to open modal -->
+    <button id="open-myModal" class="btn">Open Modal</button>
+
+    <!-- Modal Section -->
+    <div id="my_modal_6" class="modal" role="dialog">
+        <div class="modal-box">
+            <h3 class="text-lg font-bold">Donation Successful!</h3>
+            <p class="py-4" id="modal-message">Your donation has been recorded.</p>
+            <div class="modal-action">
+                <button id="close-myModal" class="btn">Close</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Function to update balances and show modal
+    function getMoneyValueById(id) {
+        // Here, you would get the balance value from somewhere in your application
+        // For demonstration, let's return a hardcoded value
+        return 10000; // Example account balance
+    }
+
+    const balance = getMoneyValueById('account-balance');
+    const donateButtons = document.querySelectorAll('[id^="btn-donate-now"]');
+    const modal = document.getElementById('my_modal_6');
+    const modalMessage = document.getElementById('modal-message');
+    const closeModalBtn = document.getElementById('close-myModal');
+    const openModalBtn = document.getElementById('open-myModal');
+
+    // Event listeners for donation buttons
+    donateButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const inputId = button.id.replace('btn-donate-now-', 'input-donate-now-');
+            const donateInput = document.getElementById(inputId);
+            const donateBalance = parseFloat(donateInput.value);
+
+            if (isNaN(donateBalance) || donateBalance <= 0) {
+                alert('Please enter a valid donation amount.');
+                return;
+            }
+
+            if (donateBalance > balance) {
+                alert('Insufficient balance for this donation.');
+                return;
+            }
+
+            // Update balances (you might want to implement your own logic here)
+            const newBalance = balance - donateBalance;
+            const receiveBalance = parseFloat(document.getElementById('donate-received').innerText);
+
+            // Update the displayed amounts
+            document.getElementById('donate-received').innerText = receiveBalance + donateBalance;
+            // Update account balance display logic as needed (you may need to store/display the new balance)
+
+            // Show the modal
+            modal.classList.add('active');
+            modalMessage.innerText = `Your donation of ${donateBalance} BDT has been recorded.`;
+        });
+    });
+
+    // Open modal
+    openModalBtn.addEventListener('click', function() {
+        modal.classList.add('active');
+    });
+
+    // Close modal
+    closeModalBtn.addEventListener('click', function() {
+        modal.classList.remove('active');
+    });
+</script>
