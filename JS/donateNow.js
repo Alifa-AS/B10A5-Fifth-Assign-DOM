@@ -1,9 +1,5 @@
 document.getElementById('btn-donate-now').addEventListener('click', function(event){
     event.preventDefault();
-document.getElementById('btn-donate-feni').addEventListener('click', function(event){
-    event.preventDefault();
-document.getElementById('btn-donate-quota').addEventListener('click', function(event){
-    event.preventDefault();
 
     const donateBalance = getDonationValueById('input-donate-Now')
     const accountBalance = getMoneyValueById('account-balance')
