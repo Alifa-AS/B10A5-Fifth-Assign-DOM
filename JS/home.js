@@ -24,19 +24,4 @@ function getMoneyValueById(id){
      
  }
 
-// const historyTab = document.getElementById('input-btn-history');
-// const donateTab = document.getElementById('input-btn-donate');
-// historyTab.addEventListener('click', function(){
-//     historyTab.classList.add("bg-lime-400") 
-//     donateTab.classList.remove("bg-lime-400")
-
-// })
- 
-// const historyTabNew = document.getElementById('input-btn-history');
-// const donateTabNew = document.getElementById('input-btn-donate');
-// historyTab.addEventListener('click', function(){
-//     historyTab.classList.remove("bg-lime-400")
-//     donateTab.classList.add("bg-lime-400")
-    
-// })
  

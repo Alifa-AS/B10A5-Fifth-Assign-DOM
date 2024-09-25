@@ -6,14 +6,15 @@ document.getElementById('btn-donate-now').addEventListener('click', function(eve
     console.log('add money donate',donateBalance, accountBalance)
 
 
-    if(isNaN(donateBalance) || donateBalance < 0){
-        alert('Please Enter Valid Amount')
+    if(isNaN(donateBalance) || donateBalance <= 0){
+        alert('Please Enter Valid Amount');
+        return;
     }
     else if(accountBalance === 0){
-        console.log('You Do not have sufficient Balance!')
+        console.log('You Do not have sufficient Balance!');
+        return;
     }
     else{
-        // myModal.style.display = 'block';
         const balance = getMoneyValueById('account-balance');
         const newBalance = balance - donateBalance;
         const receiveBalance = getMoneyValueById('donate-received');
@@ -21,18 +22,7 @@ document.getElementById('btn-donate-now').addEventListener('click', function(eve
 
         document.getElementById('donate-received').innerText = newReceiveBalance.toFixed(2);
         document.getElementById('account-balance').innerText = newBalance.toFixed(2);
-        
-        // add history
-    // const  p = document.createElement('p')
-    // p.innerText = `
-    // Added: ${donateBalance} tk. Receive Donation: ${newReceiveBalance} 
-    // `
-    // console.log(p)
-
-    // document.getElementById('history-container').appendChild(p);
-
-    // }
-    
+        my_modal_2.showModal()
     // div tag create
     const historyItem = document.createElement('div');
         historyItem.classList.add("rounded-md", "border-1-2", "border-gray-600");
@@ -47,7 +37,7 @@ document.getElementById('btn-donate-now').addEventListener('click', function(eve
                   </p>
         ` ;
         const historyContainer = document.getElementById('history-container');
-
+        my_modal_2.showModal()
         historyContainer.appendChild(historyItem); 
         console.log(historyContainer )        
         console.log(historyItem )        
@@ -55,16 +45,10 @@ document.getElementById('btn-donate-now').addEventListener('click', function(eve
         document.getElementById('history-section').remove('hidden')
      
     }
-        // alert('Donation Successful',donateBalance )
         // if(donateMoney = 'number'){
-        //     console.log('ok',donateBalance)
+        //     my_modal_2.showModal()
         // }
-        // else{
-        //     ('go back')
-        // }
-        // // show the modal
-        // const myModal = document.getElementById('my_Modal_6').checked = true;
-        // myModal.showModal();
+         
 
 })
 
