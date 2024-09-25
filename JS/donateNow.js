@@ -16,14 +16,23 @@ document.getElementById('btn-donate-now').addEventListener('click', function(eve
         // myModal.style.display = 'block';
         const balance = getMoneyValueById('account-balance');
         const newBalance = balance - donateBalance;
-        
         const receiveBalance = getMoneyValueById('donate-received');
         const newReceiveBalance = receiveBalance + donateBalance;
 
         document.getElementById('donate-received').innerText = newReceiveBalance;
 
         document.getElementById('account-balance').innerText = newBalance;
-        console.log('Donation Successful',donateBalance )
+        alert('Donation Successful',donateBalance )
+        
+        // add history
+    const  p = document.createElement('p')
+    p.innerText = `
+    Added: ${donateBalance} tk. Receive Donation: ${newReceiveBalance} 
+    `
+    console.log(p)
+
+    document.getElementById('history-container').appendChild(p);
 
     }
+    
 })

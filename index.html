@@ -35,16 +35,35 @@
 
         <!-- banner start -->
          <div class="text-center py-10 space-x-10">
-            <button class="btn bg-lime-400 hover:bg-lime-300">Donation </button>
-            <button id="input-btn-history" class="btn hover:bg-lime-300">
-                <a href="history.html">History</a>
+            <button id="input-btn-donate" class="btn bg-lime-400 hover:bg-lime-300">Donation </button>
+            <button id="input-btn-history" class="btn hover:bg-lime-300"> History
+                <!-- <a href="history.html">History</a> -->
             </button>
+            <!-- <div id="input-btn-history"
+            class="w-32 py-2  border-2 rounded-r-md focus:outline-none transition-colors duration-200 text-gray-600 font font-semibold"
+            >History</div> -->
          </div>  
          <!-- banner end -->
+        <!-- practice -->
+         <!-- <div class="flex justify-center mb-6 space-x-10">
+            <button id="input-btn-donate"
+            class="w-28 py-3 rounded-md focus:outline-none transition-colors duration-300 font-semibold bg-lime-400 hover:bg-lime-300"
+          >Donate</button>
+            <button id="input-btn-history"
+            class="w-28 py-3 rounded-md bg-slate-100 transition-colors duration-200 text-gray-600 font-semibold">
+            History
+            </button>
+         </div> -->
     </header>
+       <!-- history -->
+    <div id="history-section" class="text-2xl text-center hidden">
+        <h2>history</h2>
+        <div id="history-container">
 
+        </div>
+    </div>
     <!-- main start -->
-    <main class="container mx-auto">
+    <main id="main-section" class="container mx-auto">
         <!-- card-1 -->
         <section class="w-3/4 mx-auto lg:flex lg:justify-between items-center flex-1 lg:border-2 lg:rounded-lg lg:p-5 my-5">
            <div class="max-w-sm">
@@ -115,10 +134,29 @@
             </div>
          </section>
     </main>
+
+    <section>
+        <!-- The button to open modal -->
+        <!-- <label for="my_modal_6" class="btn">open modal</label> -->
+         <button id="open-myModal" class="btn">open!</button>
+        
+        <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+        <div class="modal" role="dialog">
+        <div class="modal-box">
+            <h3 class="text-lg font-bold">Donate successfully add!</h3>
+            <p class="py-4" id="myModal-msg">Thanks for your contribution.</p>
+            <div class="modal-action">
+                <button id="close-myModal" class="btn">Close!</button>
+            <!-- <label for="my_modal_6" class="btn">Close!</label> -->
+            </div>
+        </div>
+        </div>
+    </section>
+    
     <!-- footer start -->
     <footer class="container mx-auto bg-[#F9F7F3] py-10">
     </footer>
-
+     
     <!-- script link -->
      <script src="./JS/home.js"></script>
      <script src="./JS/donateNow.js"></script>

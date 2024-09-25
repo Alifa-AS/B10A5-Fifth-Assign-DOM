@@ -10,8 +10,17 @@ function getMoneyValueById(id){
     const moneyValue = document.getElementById(id).innerText;
     const moneyNumber = parseFloat(moneyValue);
     return moneyNumber;
+   
 }
 
-function showHistoryById(id){
-    co
-}
+
+ function showSectionById(id){
+     document.getElementById('main-section').classList.add('hidden')
+     document.getElementById('history-section').classList.add('hidden');
+
+     //remove hidden
+     document.getElementById(id).classList.remove('hidden')
+     
+ }
+
+ 
