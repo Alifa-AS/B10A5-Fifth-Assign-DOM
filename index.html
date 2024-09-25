@@ -66,8 +66,8 @@
                     impact on the lives of those in need.</p>
                 </div>
                 <div class="w-full">
-                    <input type="text" class="border-2 w-full rounded-lg p-2"
-                        name="" id="input-donate-Now" placeholder="Write Donation Amount"></div>
+                    <input id="input-donate-now" type="text" class="border-2 w-full rounded-lg p-2"
+                        name="" placeholder="Write Donation Amount"></div>
                     <div class="py-3">
                     <button id="btn-donate-now" class="btn w-full bg-lime-400">Donate Now</button>
                 </div>
@@ -90,7 +90,7 @@
                 </div>
                  <div class="w-full">
                     <input type="text" class="border-2 w-full rounded-lg p-2"
-                         name="" id="input-donate-Now" placeholder="Write Donation Amount"></div>
+                         name="" id="input-donate-feni" placeholder="Write Donation Amount"></div>
                      <div class="py-3">
                      <button id="btn-donate-feni" class="btn w-full bg-lime-400">Donate Now</button>
                  </div>
@@ -113,7 +113,7 @@
                 </div>
                  <div class="w-full">
                     <input type="text" class="border-2 w-full rounded-lg p-2"
-                         name="" id="input-donate-Now" placeholder="Write Donation Amount"></div>
+                         name="" id="input-donate-quota" placeholder="Write Donation Amount"></div>
                  <div class="py-3">
                      <button id="btn-donate-quota" class="btn w-full bg-lime-400">Donate Now</button>
                  </div>
@@ -127,18 +127,17 @@
   <div class="modal-box text-center">
     <h3 class="text-lg font-bold">Congratulation!</h3>
     <img class="block mx-auto" src="./assets/coin.png" alt="">
-    <p class="py-4">You have Donate for</p>
+    <p class="py-4">You have Donate for people</p>
     <h5>Successfully</h5>
-    <button class="btn py-3">Close Confirmation</button>
+    <button class="btn py-3" id="close-btn">Close Confirmation</button>
   </div>
   <form method="dialog" class="modal-backdrop">
-    <button>close</button>
+    <button id="continue-btn" class="btn">close</button>
   </form>
 </dialog>
     <!-- footer start -->
     <footer class="container mx-auto bg-[#F9F7F3] py-10">
     </footer>
-
     <!-- script link -->
      <script src="./JS/home.js"></script>
      <script src="./JS/donateNow.js"></script>
