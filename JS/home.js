@@ -25,3 +25,13 @@ function getMoneyValueById(id){
  }
 
  
+ function showSectionById(id){
+    document.getElementById('btn-donate-now').classList.add('hidden')
+    document.getElementById('btn-donate-feni').classList.add('hidden');
+    document.getElementById('btn-donate-quota').classList.add('hidden');
+
+
+    //remove hidden
+    document.getElementById(id).classList.remove('hidden')
+    
+}
