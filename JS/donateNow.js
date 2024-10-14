@@ -185,23 +185,19 @@ document.getElementById('btn-donate-quota').addEventListener('click', function(e
         })
        
     // div tag create
-
-    const time = newDate();
-    document.getElementById("myDate").innerHTML = time;
-
-    // const historyItem = document.createElement('div');
-    //     historyItem.classList.add("rounded-md", "border-2", "border-gray-300", "container", "mx-auto");
-    //     historyItem.innerHTML = `
-    //               <p>${donateBalance} tk. Receive Donated for Aid for Injured Quota Movement, Bangladesh</p>
-    //               <p class="text-sm">${
-    //               new Date().toLocaleString('en-US',{
-    //               timeZone: 'Asia/Dhaka',
-    //               timeStyle: 'medium',
-    //               dateStyle: 'full'
-    //               })}
-    //               </p>
-    //     ` ;
-    //     document.getElementById('history-section').appendChild(historyItem);
+    const historyItem = document.createElement('div');
+        historyItem.classList.add("rounded-md", "border-2", "border-gray-300", "container", "mx-auto");
+        historyItem.innerHTML = `
+                  <p>${donateBalance} tk. Receive Donated for Aid for Injured Quota Movement, Bangladesh</p>
+                  <p class="text-sm">${
+                  new Date().toLocaleString('en-US',{
+                  timeZone: 'Asia/Dhaka',
+                  timeStyle: 'medium',
+                  dateStyle: 'full'
+                  })}
+                  </p>
+        ` ;
+        document.getElementById('history-section').appendChild(historyItem);
                 }
                 
                 
