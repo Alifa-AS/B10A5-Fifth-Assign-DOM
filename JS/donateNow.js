@@ -30,9 +30,9 @@ document.getElementById('btn-donate-now').addEventListener('click', function(eve
         my_modal_2.showModal()
         const modal = document.getElementById('my_modal_2');
         const closeButton = modal.querySelector('.btn');
-        closeButton.addEventListener('click', () =>{
-            modal.close;
-        })
+        closeButton.addEventListener('click', () => {
+            modal.close();
+        });
        
     // div tag create
 
@@ -97,16 +97,16 @@ document.getElementById('btn-donate-feni').addEventListener('click', function(ev
     else{
         const balance = getMoneyValueById('account-balance');
         const newBalance = balance - donateBalance;
-        const receiveBalance = getMoneyValueById('donate-received');
+        const receiveBalance = getMoneyValueById('donate-received-feni');
         const newReceiveBalance = receiveBalance + donateBalance;
 
-        document.getElementById('donate-received').innerText = newReceiveBalance.toFixed(2);
+        document.getElementById('donate-received-feni').innerText = newReceiveBalance.toFixed(2);
         document.getElementById('account-balance').innerText = newBalance.toFixed(2);
         my_modal_2.showModal()
         const modal = document.getElementById('my_modal_2');
         const closeButton = modal.querySelector('.btn');
-        closeButton.addEventListener('click', () =>{
-            modal.close;
+        closeButton.addEventListener('click', () => {
+            modal.close();
         })
        
     // div tag create
@@ -172,33 +172,36 @@ document.getElementById('btn-donate-quota').addEventListener('click', function(e
     else{
         const balance = getMoneyValueById('account-balance');
         const newBalance = balance - donateBalance;
-        const receiveBalance = getMoneyValueById('donate-received');
+        const receiveBalance = getMoneyValueById('donate-received-quota');
         const newReceiveBalance = receiveBalance + donateBalance;
 
-        document.getElementById('donate-received').innerText = newReceiveBalance.toFixed(2);
+        document.getElementById('donate-received-quota').innerText = newReceiveBalance.toFixed(2);
         document.getElementById('account-balance').innerText = newBalance.toFixed(2);
         my_modal_2.showModal()
         const modal = document.getElementById('my_modal_2');
         const closeButton = modal.querySelector('.btn');
-        closeButton.addEventListener('click', () =>{
-            modal.close;
+        closeButton.addEventListener('click', () => {
+            modal.close();
         })
        
     // div tag create
 
-    const historyItem = document.createElement('div');
-        historyItem.classList.add("rounded-md", "border-2", "border-gray-300", "container", "mx-auto");
-        historyItem.innerHTML = `
-                  <p>${donateBalance} tk. Receive Donated for Aid for Injured Quota Movement, Bangladesh</p>
-                  <p class="text-sm">${
-                  new Date().toLocaleString('en-US',{
-                  timeZone: 'Asia/Dhaka',
-                  timeStyle: 'medium',
-                  dateStyle: 'full'
-                  })}
-                  </p>
-        ` ;
-        document.getElementById('history-section').appendChild(historyItem);
+    const time = newDate();
+    document.getElementById("myDate").innerHTML = time;
+
+    // const historyItem = document.createElement('div');
+    //     historyItem.classList.add("rounded-md", "border-2", "border-gray-300", "container", "mx-auto");
+    //     historyItem.innerHTML = `
+    //               <p>${donateBalance} tk. Receive Donated for Aid for Injured Quota Movement, Bangladesh</p>
+    //               <p class="text-sm">${
+    //               new Date().toLocaleString('en-US',{
+    //               timeZone: 'Asia/Dhaka',
+    //               timeStyle: 'medium',
+    //               dateStyle: 'full'
+    //               })}
+    //               </p>
+    //     ` ;
+    //     document.getElementById('history-section').appendChild(historyItem);
                 }
                 
                 
